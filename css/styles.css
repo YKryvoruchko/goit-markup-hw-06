@@ -28,6 +28,13 @@ ul, ol{
     color: #4d5ae5;
 }
 
+.header-navigation-list-page {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+}
+
 .header-navigation-logo-text {
     color: #2e2f42;
     font-family: "Raleway", sans-serif;
