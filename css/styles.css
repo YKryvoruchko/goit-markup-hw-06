@@ -1,6 +1,6 @@
 body {
+    font-family: "Roboto", sans-serif;
     color: #434455;
-    font-family: "Roboto", "Raleway", sans-serif;
     background-color: #FFFFFF;
 }
 
@@ -19,6 +19,19 @@ ul, ol{
 }
 
 /* navigation section */
+
+.header-navigation-link:hover,
+.header-navigation-link:focus {
+    color: #404BBF;
+}
+
+.header-navigation-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+}
 
 .header-navigation-adress-list-item a:hover,
 .header-navigation-adress-list-item a:focus {
@@ -41,10 +54,20 @@ ul, ol{
 
 }
 
-.header-navigation-adress-list-item {
+.header-navigation-adress-list-item-mail,
+.header-navigation-adress-list-item-number {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     color: #434455;
 }
 
+.header-navigation-adress-list-item-mail:hover,
+.header-navigation-adress-list-item-mail:focus,
+.header-navigation-adress-list-item-number:hover,
+.header-navigation-adress-list-item-number:focus {
+    color: #404BBF;
+}
 /* navigation section end */
 
 /* hero-banner section */
@@ -63,11 +86,13 @@ ul, ol{
 
 .hero-banner-button:hover,
 .hero-banner-button:focus {
-    background-color: #404BBF; /* Более тёмный оттенок */
+    background-color: #404BBF;
+    cursor: pointer;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero-banner-button {
+    font-family: "Roboto", sans-serif;
     background-color: #4D5AE5;
     font-weight: 500;
     font-size: 16px;
@@ -77,13 +102,8 @@ ul, ol{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     display: block;
     margin: 0 auto;
-}
-
-.hero-banner-button:hover{
-    background-color: #4D5AE5;
     cursor: pointer;
 }
-
 
 /* hero-banner section end*/
 
@@ -92,6 +112,11 @@ ul, ol{
 /* studio section */
 
 .studio {
+}
+
+.studio-title{
+    text-align: center;
+    color: #2E2F42;
 }
 
 .studio-list {
@@ -142,6 +167,7 @@ ul, ol{
     letter-spacing: 0.02em;
     text-align: center;
     color: #2E2F42;
+    text-transform: capitalize;
 }
 .team-list-item-text {
     font-weight: 400;
@@ -165,6 +191,7 @@ ul, ol{
     letter-spacing: 0.02em;
     text-align: center;
     color: #2E2F42;
+    
 }
 .portfolio-list {
     font-weight: 500;
@@ -183,6 +210,7 @@ ul, ol{
 
 .portfolio-list-item {
     background-color: #E7E9FC;
+    text-transform: capitalize;
 }
 .portfolio-list-item-image {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
