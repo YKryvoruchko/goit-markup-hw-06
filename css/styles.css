@@ -13,16 +13,6 @@ ul, ol{
     list-style: none;
 }
 
-.header-navigation-logo-color {
-    color: #4D5AE5;
-    font-family: "Raleway", sans-serif;
-}
-
-.header-navigation-logo-text {
-    color: #2E2F42;
-    font-family: "Raleway", sans-serif;
-}
-
 .header-navigation-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -30,10 +20,15 @@ ul, ol{
     line-height: 117%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    color: #4d5ae5;
+}
+
+.header-navigation-logo-text {
+    color: #2e2f42;
+    font-family: "Raleway", sans-serif;
 }
 
 /* navigation links */
-
 .header-navigation-link {
     font-weight: 500;
     font-size: 16px;
@@ -48,7 +43,6 @@ ul, ol{
 }
 
 /* address */
-
 .header-navigation-address {
     font-style: normal;
 }
@@ -88,7 +82,6 @@ ul, ol{
 .hero-banner-button:focus {
     background-color: #404BBF;
     cursor: pointer;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero-banner-button {
@@ -99,8 +92,6 @@ ul, ol{
     line-height: 150%;
     letter-spacing: 0.04em;
     color: #FFFFFF;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    display: block;
     margin: 0 auto;
     cursor: pointer;
 }
@@ -185,15 +176,17 @@ ul, ol{
 
 .portfolio {
 }
+
 .portfolio-title {
-    font-weight: 500;           
-    font-size: 20px;            
-    line-height: 1.2;           
-    letter-spacing: 0.02em;     
-    text-transform: capitalize; 
+    font-weight: 500;            
+    font-size: 36px;             
+    line-height: 1.11;           
+    letter-spacing: 0.02em;      
+    text-transform: capitalize;
     text-align: center;
     color: #2E2F42;
 }
+
 .portfolio-list {
     font-weight: 500;
     font-size: 20px;
@@ -202,22 +195,23 @@ ul, ol{
     color: #2E2F42;
 }
 
-.portfolio-list-item:hover,
-.portfolio-list-item:focus {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-4px);
-    cursor: pointer;
-}
-
 .portfolio-list-item {
     background-color: #E7E9FC;
     text-transform: capitalize;
 }
-.portfolio-list-item-image {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+    transform: translateY(-4px);
+    cursor: pointer;
 }
+
+.portfolio-list-item-image {
+}
+
 .portfolio-list-item-subtitle {
 }
+
 .portfolio-list-item-text {
     font-weight: 400;
     font-size: 16px;
@@ -226,7 +220,7 @@ ul, ol{
     color: #434455;
 }
 
-/* portfolio section end*/
+/* portfolio section end */
 
 .bottom {
     background-color: #2E2F42;
@@ -250,5 +244,5 @@ font-family: "Raleway", sans-serif;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
-    color: #E7E9FC;
+    color: #F4F4FD;;
 }
