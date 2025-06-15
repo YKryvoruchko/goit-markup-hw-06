@@ -38,11 +38,25 @@ ul, ol{
     text-decoration: none;
 }
 
-.header-navigation-link:hover,
-.header-navigation-link:focus {
-    color: #404BBF;
+.header-navigation-link,
+.header-navigation-link-portfolio,
+.header-navigation-link-contacts {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+    text-decoration: none;
 }
 
+.header-navigation-link:hover,
+.header-navigation-link:focus,
+.header-navigation-link-portfolio:hover,
+.header-navigation-link-portfolio:focus,
+.header-navigation-link-contacts:hover,
+.header-navigation-link-contacts:focus {
+    color: #404BBF;
+}
 /* address */
 .header-navigation-address {
     font-style: normal;
@@ -164,12 +178,11 @@ ul, ol{
     text-transform: capitalize;
 }
 .team-list-item-text {
+    color: #434455;
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.2em;
-    text-align: center;
-    color: #434455;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 /* team section end*/
