@@ -167,7 +167,7 @@ ul, ol{
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
-    letter-spacing: 0.02em;
+    letter-spacing: 7.2px;
     text-align: center;
     color: #434455;
 }
@@ -180,10 +180,10 @@ ul, ol{
 }
 
 .portfolio-title {
-    font-weight: 500;            
-    font-size: 36px;             
-    line-height: 1.11;           
-    letter-spacing: 0.02em;      
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 2px;      
     text-transform: capitalize;
     text-align: center;
     color: #2E2F42;
