@@ -46,8 +46,8 @@ ul, li {
 }
 
 .header-navigation {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     width: 100%;
 }
 
@@ -61,7 +61,6 @@ ul, li {
 .header-navigation-left {
     display: flex;
     align-items: center;
-    gap: 76px;
 }
 
 .header-navigation-logo {
@@ -72,7 +71,7 @@ ul, li {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    margin-right: 76px; 
+    margin-right: 76px;
 }
 
 .header-navigation-logo-text {
@@ -82,19 +81,26 @@ ul, li {
 
 .header-navigation-list {
     display: flex;
-    gap: 40px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .header-navigation-list-page {
+    margin-right: 40px;
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
 }
 
+.header-navigation-list-page:last-child {
+    margin-right: 0;
+}
+
 .header-navigation-link {
     display: block;
-    padding: 24px 0; 
+    padding: 24px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -110,12 +116,21 @@ ul, li {
 
 .header-navigation-address {
     font-style: normal;
-    display: flex;
 }
 
 .header-navigation-address-list {
     display: flex;
-    gap: 40px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.header-navigation-address-list-item {
+    margin-right: 40px;
+}
+
+.header-navigation-address-list-item:last-child {
+    margin-right: 0;
 }
 
 .header-navigation-address-list-item a {
@@ -131,6 +146,7 @@ ul, li {
 .header-navigation-address-list-item a:focus {
     color: #404BBF;
 }
+
 /* navigation section end */
 
 /* hero-banner section */
@@ -277,6 +293,11 @@ ul, li {
     transition: box-shadow 0.3s ease;
 }
 
+.team-list-item:first-child {
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+}
+
 .team-list-item-image {
     width: 100%;
     height: auto;
@@ -284,7 +305,7 @@ ul, li {
 }
 
 .workers-name {
-    padding: 32px 16px;
+    padding: 32px 0;
     text-align: center;
 }
 
