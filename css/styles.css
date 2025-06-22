@@ -1,20 +1,57 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+a {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
     background-color: #FFFFFF;
 }
 
+
 a{
     text-decoration: none;
     color: inherit;
 }
 
-ul, ol{
-    list-style: none;
+img{  
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .header {
     color: #2E2F42;
+    padding: 24px 0 24px 0;
+    border-bottom:1px solid  #e7e9fc;
 }
 
 /* Logo styles */
@@ -26,6 +63,29 @@ ul, ol{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+}
+
+.header-navigation-direction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.header-navigation-left {
+    display: flex;
+    align-items: center;
+    gap: 76px;
+}
+
+.header-navigation-list {
+    display: flex;
+    gap: 40px;
+}
+
+.header-navigation-address{
+    display: flex;
 }
 
 .header-navigation-list-page {
@@ -55,37 +115,17 @@ ul, ol{
     color: #404BBF;
 }
 
-.header-navigation-link-portfolio {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2E2F42;
-    text-decoration: none;
-}
-
-.header-navigation-link-portfolio:hover,
-.header-navigation-link-portfolio:focus {
-    color: #404BBF;
-}
-
-.header-navigation-link-contacts {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2E2F42;
-    text-decoration: none;
-}
-
-.header-navigation-link-contacts:hover,
-.header-navigation-link-contacts:focus {
-    color: #404BBF;
-}
-
 /* Address block */
 .header-navigation-address {
     font-style: normal;
+    display: flex;
+    gap:40px;
+
+}
+
+.header-navigation-address-list{
+    display: flex;
+    gap:40px;
 }
 
 .header-navigation-address-list-item a {
@@ -104,9 +144,29 @@ ul, ol{
 
 /* hero-banner section */
 
+.container-banner {
+    width: 1440px;
+    width: 100%;
+    display: flex;
+    height: 600px;
+    margin: 0 auto;
+    padding: 0 auto;
+
+}
+
+/* hero-banner section */
 .hero-banner {
     background-color: #2E2F42;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 188px 0 188px;
+    
 }
+
 .hero-banner-title {
     font-weight: 700;
     font-size: 56px;
@@ -114,15 +174,13 @@ ul, ol{
     letter-spacing: 0.02em;
     text-align: center;
     color: #FFFFFF;
-}
-
-.hero-banner-button:hover,
-.hero-banner-button:focus {
-    background-color: #404BBF;
-    cursor: pointer;
+    margin-bottom: 24px; 
+    margin-bottom: 48px;
 }
 
 .hero-banner-button {
+    width: 169px;
+    height: 56px;
     font-family: "Roboto", sans-serif;
     background-color: #4D5AE5;
     font-weight: 500;
@@ -130,7 +188,15 @@ ul, ol{
     line-height: 150%;
     letter-spacing: 0.04em;
     color: #FFFFFF;
-    margin: 0 auto;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero-banner-button:hover,
+.hero-banner-button:focus {
+    background-color: #404BBF;
     cursor: pointer;
 }
 
@@ -141,16 +207,35 @@ ul, ol{
 /* studio section */
 
 .studio {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 120px 0;
 }
 
 .studio-title{
-    text-align: center;
-    color: #2E2F42;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 .studio-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    list-style: none;
 }
 .studio-list-item {
+    flex: 1 1 calc(25% - 24px);
+    min-width: 200px;
 }
 .studio-subtitle {
     color: #2E2F42;
@@ -173,117 +258,176 @@ ul, ol{
 
 .team {
     background-color: #F4F4FD;
+    font-family: "Roboto", sans-serif;
+    color: #2E2F42;
+    text-align: center;
+    padding: 120px 0;
 }
+
 .team-title {
     font-weight: 700;
     font-size: 36px;
-    line-height: 111%;
+    line-height: 1.11;
+    margin-bottom: 72px;
     letter-spacing: 0.02em;
-    text-align: center;
-    color: #2E2F42;
     text-transform: capitalize;
 }
+
 .team-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
+
 .team-list-item {
     background-color: #FFFFFF;
+    width: 264px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
 }
+
 .team-list-item-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
+
+.workers-name {
+    padding: 32px 16px;
+    text-align: center;
+}
+
 .team-list-item-subtitle {
     font-weight: 500;
     font-size: 20px;
-    line-height: 120%;
+    line-height: 1.2;
     letter-spacing: 0.02em;
-    text-align: center;
     color: #2E2F42;
+    margin-bottom: 8px;
     text-transform: capitalize;
 }
+
 .team-list-item-text {
-    color: #434455;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
+    color: #434455;
     letter-spacing: 0.02em;
 }
-
 /* team section end*/
 
 /* portfolio section */
 
 .portfolio {
+    font-family: "Roboto", sans-serif;
+    color: #2E2F42;
+    letter-spacing: 0.02em;
+    padding: 120px 0;
+    background-color: #fff;
 }
 
 .portfolio-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
-    letter-spacing: 0.02em;      
-    text-transform: capitalize;
     text-align: center;
-    color: #2E2F42;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
 }
 
 .portfolio-list {
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: #2E2F42;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
 }
 
 .portfolio-list-item {
-    background-color: #E7E9FC;
-    text-transform: capitalize;
-}
-
-.portfolio-list-item:hover,
-.portfolio-list-item:focus {
-    transform: translateY(-4px);
+    width: calc((100% - 48px) / 3);
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px rgba(46, 47, 66, 0.08);
+    transition: box-shadow 0.3s ease;
     cursor: pointer;
 }
 
+.portfolio-list-item:hover {
+    box-shadow: 0px 4px 16px rgba(46, 47, 66, 0.12);
+}
+
 .portfolio-list-item-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-name {
+    padding: 32px 16px;
+    border-top: none;
+    background-color: #fff;
 }
 
 .portfolio-list-item-subtitle {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    color: #2E2F42;
 }
 
 .portfolio-list-item-text {
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.02em;
+    line-height: 1.5;
     color: #434455;
 }
-
 /* portfolio section end */
 
 .bottom {
-    background-color: #2E2F42;
+    background-color: #2e2f42;
+    font-family: "Relaway", sans-serif;
+    padding: 100px 0;
 }
+
+
 .bottom-logo {
-font-family: "Raleway", sans-serif;  
+    color: #4d5ae5;
+    text-transform: uppercase;
     font-weight: 700;
     font-size: 18px;
-    line-height: 117%;
+    line-height: 1.17;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #4d5ae5;
+    margin-bottom: 16px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .bottom-logo-span {
-    color: #f4f4fd; 
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #f4f4fd;
+    text-decoration: none;
 }
 
 .bottom-text {
-    font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #F4F4FD;;
+    color: #f4f4fd;
+    max-width: 264px;
 }
