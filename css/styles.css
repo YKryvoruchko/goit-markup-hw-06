@@ -1,11 +1,18 @@
-/* Global style */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, div, a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+a {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -27,42 +34,35 @@ img {
     height: auto;
 }
 
-ul, li {
+ul,
+li {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
+/* ======= Container ======= */
 .container {
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
+/* ======= Header ======= */
 .header {
     color: #2E2F42;
     padding: 24px 0;
     border-bottom: 1px solid #e7e9fc;
 }
 
+/* ======= Navigation ======= */
 .header-navigation {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.header-navigation-direction {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.header-navigation-left {
-    display: flex;
-    align-items: center;
-}
-
+/* ======= Logo ======= */
 .header-navigation-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -79,18 +79,17 @@ ul, li {
     font-family: "Raleway", sans-serif;
 }
 
+/* ======= Navigation List ======= */
 .header-navigation-list {
     display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    margin-right: 332px;
 }
 
 .header-navigation-list-page {
     margin-right: 40px;
     font-weight: 500;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0.02em;
 }
 
@@ -101,12 +100,12 @@ ul, li {
 .header-navigation-link {
     display: block;
     padding: 24px 0;
+    color: #2E2F42;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #2E2F42;
-    text-decoration: none;
+    transition: color 250ms ease;
 }
 
 .header-navigation-link:hover,
@@ -114,24 +113,14 @@ ul, li {
     color: #404BBF;
 }
 
+/* ======= Contacts ======= */
 .header-navigation-address {
     font-style: normal;
-    margin-left: 332px;
 }
 
 .header-navigation-address-list {
     display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.header-navigation-address-list-item {
-    margin-right: 40px;
-}
-
-.header-navigation-address-list-item:last-child {
-    margin-right: 0;
+    gap: 40px;
 }
 
 .header-navigation-address-list-item a {
@@ -140,14 +129,13 @@ ul, li {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    text-decoration: none;
+    transition: color 250ms ease;
 }
 
 .header-navigation-address-list-item a:hover,
 .header-navigation-address-list-item a:focus {
     color: #404BBF;
 }
-
 /* navigation section end */
 
 /* hero-banner section */
