@@ -55,6 +55,12 @@ li {
     border-bottom: 1px solid #e7e9fc;
 }
 
+.header > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /* ======= Navigation ======= */
 .header-navigation {
     display: flex;
@@ -120,7 +126,14 @@ li {
 
 .header-navigation-address-list {
     display: flex;
-    gap: 40px;
+}
+
+.header-navigation-address-list-item {
+    margin-right: 40px;
+}
+
+.header-navigation-address-list-item:last-child {
+    margin-right: 0;
 }
 
 .header-navigation-address-list-item a {
