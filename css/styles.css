@@ -369,7 +369,6 @@ li {
 
 .portfolio-list-item {
     width: calc((100% - 48px) / 3);
-    transition: box-shadow 0.3s ease;
 }
 
 .portfolio-list-item:hover {
