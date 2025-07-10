@@ -358,6 +358,7 @@ li {
 }
 
 .portfolio-list {
+    max-width: 1440px;
     display: flex;
     flex-wrap: wrap;
     gap: 48px 24px;
