@@ -353,12 +353,13 @@ li {
     margin-bottom: 72px;
 }
 
-.portfolio-container {
+.portfolio-container .container {
+    max-width: 1440px;
+    margin: 0 auto;
     border: 1px solid #e7e9fc; /* по ТЗ */
 }
 
 .portfolio-list {
-    max-width: 1440px;
     display: flex;
     flex-wrap: wrap;
     gap: 48px 24px;
