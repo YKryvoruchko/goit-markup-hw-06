@@ -153,6 +153,22 @@ li {
 .header-navigation-address-list-item a:focus {
     color: #404BBF;
 }
+
+.header-navigation-link.current {
+    position: relative;
+    color: #404BBF;
+}
+
+.header-navigation-link.current::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: #404BBF;
+    border-radius: 2px;
+}
 /* navigation section end */
 
 /* hero-banner section */
@@ -163,7 +179,13 @@ li {
 
 /* hero-banner section */
 .hero-banner {
-    background-color: #2E2F42;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+    ), url("/images/hero-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 188px 0;
 }
 
@@ -235,11 +257,15 @@ li {
 .studio-list {
     display: flex;
     gap: 24px; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
 
 }
 
 .studio-list-item {
     flex-basis: calc((100% - 72px) / 4);
+
 }
 
 .studio-subtitle {
@@ -258,6 +284,35 @@ li {
     line-height: 150%;
     letter-spacing: 0.02em;
 }
+
+.studio-list {
+    display: flex;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.studio-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    width: 264px;
+    margin-bottom: 8px;
+    padding: 24px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+    text-align: center;
+}
+
+.studio-icon {
+    width: 64px;
+    height: 64px;
+}
+
+
 /* studio section end*/
 
 /* team section end*/
@@ -331,6 +386,37 @@ li {
     color: #434455;
     letter-spacing: 0.02em;
 }
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 0 16px 32px;
+    margin: 0;
+    list-style: none;
+}
+
+.social-item {}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: #404BBF;
+}
+
+.social-icon {
+    fill: #ffffff;
+}
 /* team section end*/
 
 /* portfolio section */
@@ -371,16 +457,45 @@ li {
 
 .portfolio-list-item {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item:hover {
     box-shadow: 0px 4px 16px rgba(46, 47, 66, 0.12);
 }
 
+.portfolio-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
 .portfolio-list-item-image {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(77, 90, 255, 1);
+    color: #fff;
+    padding: 40px 32px;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item:hover .portfolio-overlay {
+    transform: translateY(0%);
+}
+
+.portfolio-overlay-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
 }
 
 .portfolio-name {
@@ -409,9 +524,18 @@ li {
 .bottom {
     background-color: #2e2f42;
     font-family: "Relaway", sans-serif;
-    padding: 100px 0;
+    padding: 100px 0 132px;
 }
 
+.container-bottom {
+    display: flex;
+    gap: 120px;
+    align-items: flex-start;
+}
+
+.bottom-left {
+    max-width: 264px;
+}
 
 .bottom-logo {
     color: #4d5ae5;
@@ -442,4 +566,47 @@ li {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
+}
+
+.bottom-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bottom-title {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+.bottom-list {
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.social-bottom-link {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms ease;
+}
+
+.social-bottom-link:hover,
+.social-bottom-link:focus {
+    background-color: #31d0aa;
+}
+
+.social-bottom-link svg {
+    fill: #f4f4fd;
 }
