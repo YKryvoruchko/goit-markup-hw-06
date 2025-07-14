@@ -53,6 +53,9 @@ li {
     color: #2E2F42;
     padding: 24px 0;
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header > .container {
@@ -111,7 +114,7 @@ li {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    transition: color 250ms ease;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-navigation-link:hover,
@@ -146,7 +149,7 @@ li {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    transition: color 250ms ease;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-navigation-address-list-item a:hover,
@@ -162,7 +165,7 @@ li {
 .header-navigation-link.current::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     height: 4px;
     width: 100%;
@@ -179,6 +182,8 @@ li {
 
 /* hero-banner section */
 .hero-banner {
+    max-width: 1440px;
+    margin: 0 auto;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -222,6 +227,7 @@ li {
     letter-spacing: 0.04em;
     color: #FFFFFF;
     padding: 12px 24px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-banner-button:hover,
@@ -423,7 +429,7 @@ li {
 
 .portfolio {
     font-family: "Roboto", sans-serif;
-    color: #2E2F42;
+    color: #2e2f42;
     letter-spacing: 0.02em;
     padding: 120px 0;
     background-color: #fff;
@@ -442,7 +448,7 @@ li {
 .portfolio-container .container {
     max-width: 1440px;
     margin: 0 auto;
-    border: 1px solid #e7e9fc; /* по ТЗ */
+    border: 1px solid #e7e9fc;
 }
 
 .portfolio-list {
@@ -461,7 +467,10 @@ li {
 }
 
 .portfolio-list-item:hover {
-    box-shadow: 0px 4px 16px rgba(46, 47, 66, 0.12);
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-thumb {
@@ -475,31 +484,27 @@ li {
     display: block;
 }
 
-.portfolio-overlay {
+.portfolio-overlay-text {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(77, 90, 255, 1);
-    color: #fff;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--light-color, #f4f4fd);
     padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-list-item:hover .portfolio-overlay {
+.portfolio-list-item:hover .portfolio-overlay-text {
     transform: translateY(0%);
 }
 
-.portfolio-overlay-text {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #fff;
-}
-
 .portfolio-name {
-    border: 1px solid #E7E9FC;
+    border: 1px solid #e7e9fc;
     padding: 32px 16px;
     border-top: none;
     background-color: #fff;
@@ -510,7 +515,7 @@ li {
     font-size: 20px;
     line-height: 1.2;
     margin-bottom: 8px;
-    color: #2E2F42;
+    color: #2e2f42;
 }
 
 .portfolio-list-item-text {
@@ -519,6 +524,7 @@ li {
     line-height: 1.5;
     color: #434455;
 }
+
 /* portfolio section end */
 
 .bottom {
@@ -530,11 +536,12 @@ li {
 .container-bottom {
     display: flex;
     gap: 120px;
-    align-items: flex-start;
+    align-items: baseline;
 }
 
 .bottom-left {
     max-width: 264px;
+    margin-right: 120px;
 }
 
 .bottom-logo {
@@ -566,6 +573,7 @@ li {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
+    margin-bottom: 16px;
 }
 
 .bottom-right {
@@ -599,7 +607,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 250ms ease;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-bottom-link:hover,
@@ -609,4 +617,11 @@ li {
 
 .social-bottom-link svg {
     fill: #f4f4fd;
+}
+
+.icon-instagram,
+.icon-twitter,
+.icon-facebook,
+.icon-linkedin {
+    display: block;
 }
