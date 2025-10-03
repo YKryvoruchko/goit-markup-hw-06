@@ -184,7 +184,7 @@ section {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     background-color: #fff;
@@ -244,6 +244,10 @@ section {
     text-align: start;
 }
 
+.menu-nav ul li:first-child a {
+    color: #404bbf; /* синий цвет */
+}
+
 .menu-link:hover,
 .menu-link:focus {
     color: #404bbf;
@@ -268,7 +272,18 @@ section {
     margin-bottom: 48px;
 }
 
-.menu-phone,
+.menu-phone{
+    font-family: inherit;
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #404BBF;
+}
+
 .menu-email {
     font-family: inherit;
     display: block;
@@ -803,6 +818,10 @@ input {
     font-family: inherit;
 }
 
+.checkbox-text{
+  padding-left: 0px;
+}
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -938,6 +957,7 @@ input {
 }
 
 .input-icon {
+    transform: translateY(-50%);
     position: absolute;
     left: 16px;
     top: 50%;
@@ -993,6 +1013,7 @@ input {
 }
 
 .checkbox {
+    display: flex;
     align-items: center;
     font-weight: 400;
     font-size: 12px;
@@ -1000,7 +1021,6 @@ input {
     letter-spacing: 0.04em;
     color: #8e8f99;
     cursor: pointer;
-    margin-top: 16px;
 }
 
 .checkbox-container {
@@ -1014,6 +1034,7 @@ input {
 }
 
 .checkbox-custom {
+    flex-shrink: 0;
     width: 16px;
     height: 16px;
     border-radius: 2px;
@@ -1185,9 +1206,10 @@ input[type="checkbox"]:checked+label .checkbox-custom {
     }
 
     .features-title {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 120%;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 111%;
+        letter-spacing: 0.02em;
         text-align: left;
     }
 
@@ -1417,7 +1439,7 @@ input[type="checkbox"]:checked+label .checkbox-custom {
     .main-section {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url("../images/hero-banner.jpg");
+            url("../images/bg-mob-min.jpg");
     }
 }
 
@@ -1426,49 +1448,7 @@ input[type="checkbox"]:checked+label .checkbox-custom {
     .main-section {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url("../images/hero-banner-desktop.jpg");
-    }
-
-    /* Team images x2 */
-    .team-image[alt="Mark Guerrero"] {
-        content: url("../images/img-min-desktop.jpg");
-    }
-
-    .team-image[alt="Tom Ford"] {
-        content: url("../images/img1-min-desktop.jpg");
-    }
-
-    .team-image[alt="Camila Garcia"] {
-        content: url("../images/img-min2-desktop.jpg");
-    }
-
-    .team-image[alt="Daniel Wilson"] {
-        content: url("../images/img3-min-desktop.jpg");
-    }
-
-    /* Portfolio images x2 */
-    .row-img[alt="banking-app"] {
-        content: url("../images/p1-desktop.jpg");
-    }
-
-    .row-img[alt="Cashless Payment"] {
-        content: url("../images/p2-desktop.jpg");
-    }
-
-    .row-img[alt="Meditation App"] {
-        content: url("../images/p3-desktop.jpg");
-    }
-
-    .row-img[alt="Taxi Service"] {
-        content: url("../images/p4-desktop.jpg");
-    }
-
-    .row-img[alt="Screen Illustrations"] {
-        content: url("../images/p5-desktop.jpg");
-    }
-
-    .row-img[alt="Online Courses"] {
-        content: url("../images/p6-desktop.jpg");
+            url("../images/bg-mob2x-min.jpg");
     }
 }
 
@@ -1477,7 +1457,7 @@ input[type="checkbox"]:checked+label .checkbox-custom {
     .main-section {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url("../images/hero-banner.jpg");
+            url("../images/bg-tab-min.jpg");
     }
 }
 
@@ -1486,49 +1466,7 @@ input[type="checkbox"]:checked+label .checkbox-custom {
     .main-section {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url("../images/hero-banner-desktop.jpg");
-    }
-
-    /* Team images x2 */
-    .team-image[alt="Mark Guerrero"] {
-        content: url("../images/img-min-desktop.jpg");
-    }
-
-    .team-image[alt="Tom Ford"] {
-        content: url("../images/img1-min-desktop.jpg");
-    }
-
-    .team-image[alt="Camila Garcia"] {
-        content: url("../images/img-min2-desktop.jpg");
-    }
-
-    .team-image[alt="Daniel Wilson"] {
-        content: url("../images/img3-min-desktop.jpg");
-    }
-
-    /* Portfolio images x2 */
-    .row-img[alt="banking-app"] {
-        content: url("../images/p1-desktop.jpg");
-    }
-
-    .row-img[alt="Cashless Payment"] {
-        content: url("../images/p2-desktop.jpg");
-    }
-
-    .row-img[alt="Meditation App"] {
-        content: url("../images/p3-desktop.jpg");
-    }
-
-    .row-img[alt="Taxi Service"] {
-        content: url("../images/p4-desktop.jpg");
-    }
-
-    .row-img[alt="Screen Illustrations"] {
-        content: url("../images/p5-desktop.jpg");
-    }
-
-    .row-img[alt="Online Courses"] {
-        content: url("../images/p6-desktop.jpg");
+            url("../images/bg-tab2x-min.jpg");
     }
 }
 
@@ -1548,46 +1486,4 @@ input[type="checkbox"]:checked+label .checkbox-custom {
                 rgba(46, 47, 66, 0.7)),
             url("../images/hero-banner-desktop.jpg");
     }
-
-    /* Team images x2 */
-    .team-image[alt="Mark Guerrero"] {
-        content: url("../images/img-min-desktop.jpg");
-    }
-
-    .team-image[alt="Tom Ford"] {
-        content: url("../images/img1-min-desktop.jpg");
-    }
-
-    .team-image[alt="Camila Garcia"] {
-        content: url("../images/img-min2-desktop.jpg");
-    }
-
-    .team-image[alt="Daniel Wilson"] {
-        content: url("../images/img3-min-desktop.jpg");
-    }
-
-    /* Portfolio images x2 */
-    .row-img[alt="banking-app"] {
-        content: url("../images/p1-desktop.jpg");
-    }
-
-    .row-img[alt="Cashless Payment"] {
-        content: url("../images/p2-desktop.jpg");
-    }
-
-    .row-img[alt="Meditation App"] {
-        content: url("../images/p3-desktop.jpg");
-    }
-
-    .row-img[alt="Taxi Service"] {
-        content: url("../images/p4-desktop.jpg");
-    }
-
-    .row-img[alt="Screen Illustrations"] {
-        content: url("../images/p5-desktop.jpg");
-    }
-
-    .row-img[alt="Online Courses"] {
-        content: url("../images/p6-desktop.jpg");
-    }
-}
+} 
